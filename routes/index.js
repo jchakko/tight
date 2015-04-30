@@ -22,5 +22,6 @@ exports.seed = function(req,res){
 exports.retrieve = function(req,res){
 	Major.find({}, function(err, docs) {
 		console.log(docs);
+		res.render("majors", {majors:docs});
 	})
 }
