@@ -29,6 +29,7 @@ app.get('/', routes.index);
 app.get('/users', users.list);
 app.get('/seed', routes.seed);
 app.get('/retrieve', routes.retrieve);
+app.get('/science' , routes.science);
 app.get('/science/computer', routes.computer);
 
 http.createServer(app).listen(app.get('port'), function(){

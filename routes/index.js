@@ -30,6 +30,11 @@ exports.retrieve = function(req,res){
 	})
 }
 
+/* GET science page. */
+exports.science = function(req, res){
+  res.render('science', { title: 'Science' });
+};
+
 exports.computer = function(req,res){
 	Major.find({}, function(err, docs) {
 		console.log(docs);
