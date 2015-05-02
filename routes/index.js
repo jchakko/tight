@@ -12,7 +12,8 @@ exports.index = function(req, res){
 exports.seed = function(req,res){
 
 	new Major({
-		name : 'Economics'
+		name : 'Computer Science',
+		secondary : 'Art Studio'
 	}
 		).save(function (err, major){ 
 			console.log(major)
@@ -23,5 +24,12 @@ exports.retrieve = function(req,res){
 	Major.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("majors", {majors:docs});
+	})
+}
+
+exports.computer = function(req,res){
+	Major.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("computer", {majors:docs});
 	})
 }
