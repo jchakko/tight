@@ -13,10 +13,10 @@ exports.seed = function(req,res){
 
 	new Major({
 		name : 'Computer Science',
-		secondary : 'Art Studio',
-		explanation : 'Study graphics and the underlying processes of rending images',
-		career : 'Graphic Designer',
-		famous : 'Paula Scher: American Graphic Designer'
+		secondary : 'Neuroscience',
+		explanation : 'Computational neuroscience is the study of brain function of the information processing properties of the structures that compose the nervous system',
+		career : 'Artificial Intelligence Programmer',
+		famous : 'Alan Turing'
 	}
 		).save(function (err, major){ 
 			console.log(major)
