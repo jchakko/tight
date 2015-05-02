@@ -30,6 +30,7 @@ app.get('/users', users.list);
 app.get('/seed', routes.seed);
 app.get('/retrieve', routes.retrieve);
 app.get('/science/computer', routes.computer);
+app.get('/seedData', routes.seedData);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
