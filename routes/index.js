@@ -46,6 +46,11 @@ exports.retrieve = function(req,res){
 	})
 }
 
+/* GET science page. */
+exports.science = function(req, res){
+  res.render('science', { title: 'Science' });
+};
+
 exports.computer = function(req,res){
 	computerMajor.find({}, function(err, docs) {
 		console.log(docs);
