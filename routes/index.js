@@ -13,7 +13,10 @@ exports.seed = function(req,res){
 
 	new Major({
 		name : 'Computer Science',
-		secondary : 'Art Studio'
+		secondary : 'Art Studio',
+		explanation : 'Study graphics and the underlying processes of rending images',
+		career : 'Graphic Designer',
+		famous : 'Paula Scher: American Graphic Designer'
 	}
 		).save(function (err, major){ 
 			console.log(major)

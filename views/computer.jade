@@ -3,4 +3,7 @@ extends layout
 block content
   h1 Computer Science & Computer Information Systems
   each major in majors
-    p #{major.secondary}
+    h2 #{major.secondary}
+    p #{major.explanation}
+    p #{major.career}
+    p #{major.famous}
