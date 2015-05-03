@@ -31,6 +31,7 @@ app.get('/seed', routes.seed);
 app.get('/retrieve', routes.retrieve);
 app.get('/science' , routes.science);
 app.get('/science/computer', routes.computer);
+app.get('/science/math', routes.math);
 app.get('/seedData', routes.seedData);
 
 http.createServer(app).listen(app.get('port'), function(){

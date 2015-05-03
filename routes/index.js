@@ -2,9 +2,11 @@ var db = require('../db');
 var mongoose = require('mongoose');
 var majorSchema = require('../schemas/major');
 var computerMajorSchema = require('../schemas/computerMajor');
+var mathMajorSchema = require('../schemas/mathMajor');
 
 var Major = mongoose.model('Major');
 var computerMajor = mongoose.model('computerMajor');
+var mathMajor = mongoose.model('mathMajor');
 
 /* GET home page. */
 exports.index = function(req, res){
@@ -27,12 +29,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new Major({
-		name : 'Computer Science',
-		secondary : 'Psychology',
-		explanation : 'Understanding human behavior leads to more user friendly software and hardware',
-		career : 'Human-Computer Interaction',
-		famous : 'Douglas Engelbart'
+	new mathMajor({
+		name : 'Mathematics',
+		secondary : 'Philosophy',
+		explanation : 'Analyze issues and question assumptions with the tools to tackle quantifiable problems',
+		career : 'Epidemiology',
+		famous : 'René Descartes'
 	}
 		).save(function (err, major){ 
 			console.log(major)
@@ -55,5 +57,12 @@ exports.computer = function(req,res){
 	computerMajor.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("computer", {majors:docs});
+	})
+}
+
+exports.math = function(req,res){
+	mathMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("math", {majors:docs});
 	})
 }
