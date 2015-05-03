@@ -33,6 +33,7 @@ app.get('/science' , routes.science);
 app.get('/science/computer', routes.computer);
 app.get('/science/math', routes.math);
 app.get('/science/life', routes.life);
+app.get('/ss/cognitive', routes.cognitive);
 app.get('/seedData', routes.seedData);
 
 http.createServer(app).listen(app.get('port'), function(){

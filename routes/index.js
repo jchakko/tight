@@ -3,12 +3,14 @@ var mongoose = require('mongoose');
 var majorSchema = require('../schemas/major');
 var computerMajorSchema = require('../schemas/computerMajor');
 var mathMajorSchema = require('../schemas/mathMajor');
-var lifeMajorSchema = require('../schemas/lifeMajor')
+var lifeMajorSchema = require('../schemas/lifeMajor');
+var cognitiveMajorSchema = require('../schemas/cognitiveMajor');
 
 var Major = mongoose.model('Major');
 var computerMajor = mongoose.model('computerMajor');
 var mathMajor = mongoose.model('mathMajor');
 var lifeMajor = mongoose.model('lifeMajor');
+var cognitiveMajor = mongoose.model('cognitiveMajor');
 
 /* GET home page. */
 exports.index = function(req, res){
@@ -31,12 +33,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new ifeMajor({
-		name : 'Chemistry',
-		secondary : 'English',
-		explanation : 'Recognize scientific processes and incorporate them into literature',
-		career : 'Novelist',
-		famous : 'Agatha Christie'
+	new cognitiveMajor({
+		name : 'Sociology',
+		secondary : 'Economics',
+		explanation : 'Evaluate how different thought patterns led to various economic systems',
+		career : 'Portfolio Manager',
+		famous : 'John von Neumann'
 	}
 		).save(function (err, major){ 
 			console.log(major)
@@ -73,5 +75,12 @@ exports.life = function(req,res){
 	lifeMajor.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("life", {majors:docs});
+	})
+}
+
+exports.cognitive = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("cognitive", {majors:docs});
 	})
 }
