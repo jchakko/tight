@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Science
+  each major in majors
+    h2 #{major.secondary}
+    p Description : #{major.explanation}
+    p Career Path: #{major.career}
+    p Notable Person: #{major.famous}
+    
+  img(src= "http://i.imgur.com/vkHsIwi.png")
+  img(src= "http://i.imgur.com/LcXqK3f.png")
