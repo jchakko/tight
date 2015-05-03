@@ -35,12 +35,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new continentalMajor({
+	new Major({
 		name : 'Studies',
-		secondary : 'Architecture',
-		explanation : 'Design infrastructure that follows the trends of other countries',
-		career : 'Architect',
-		famous : 'Zaha Hadid'
+		secondary : 'International Relations',
+		explanation : 'Gain a deeper understanding of how groups of nations interact with each other',
+		career : 'Diplomat',
+		famous : 'Shirley Temple'
 	}
 		).save(function (err, major){ 
 			console.log(major)
