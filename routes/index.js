@@ -29,12 +29,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new mathMajor({
+	new Major({
 		name : 'Mathematics',
-		secondary : 'Philosophy',
-		explanation : 'Analyze issues and question assumptions with the tools to tackle quantifiable problems',
-		career : 'Epidemiology',
-		famous : 'René Descartes'
+		secondary : 'Economics',
+		explanation : 'Represent theories and model equations to analyze economic problems',
+		career : 'Accounting',
+		famous : 'Augustin Cournot'
 	}
 		).save(function (err, major){ 
 			console.log(major)
