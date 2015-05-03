@@ -5,12 +5,14 @@ var computerMajorSchema = require('../schemas/computerMajor');
 var mathMajorSchema = require('../schemas/mathMajor');
 var lifeMajorSchema = require('../schemas/lifeMajor');
 var cognitiveMajorSchema = require('../schemas/cognitiveMajor');
+var continentalMajorSchema = require('../schemas/continentalMajor');
 
 var Major = mongoose.model('Major');
 var computerMajor = mongoose.model('computerMajor');
 var mathMajor = mongoose.model('mathMajor');
 var lifeMajor = mongoose.model('lifeMajor');
 var cognitiveMajor = mongoose.model('cognitiveMajor');
+var continentalMajor = mongoose.model('continentalMajor');
 
 /* GET home page. */
 exports.index = function(req, res){
@@ -33,12 +35,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new cognitiveMajor({
-		name : 'Sociology',
-		secondary : 'Economics',
-		explanation : 'Evaluate how different thought patterns led to various economic systems',
-		career : 'Portfolio Manager',
-		famous : 'John von Neumann'
+	new continentalMajor({
+		name : 'Studies',
+		secondary : 'Architecture',
+		explanation : 'Design infrastructure that follows the trends of other countries',
+		career : 'Architect',
+		famous : 'Zaha Hadid'
 	}
 		).save(function (err, major){ 
 			console.log(major)
@@ -84,3 +86,10 @@ exports.cognitive = function(req,res){
 		res.render("cognitive", {majors:docs});
 	})
 }
+
+exports.continental = function(req,res){
+	continentalMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("continental", {majors:docs});
+	})
+} 
