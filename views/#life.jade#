@@ -1,20 +1,6 @@
 extends layout
 
 block content
-  style.
-      h1 {
-          color: white;
-      }
-      h2 {
-          color: white;
-      }
-      h3 {
-          color: white;
-      }
-      p {
-          color: white;
-      }
-  body(style="background-color: #000033")
   h1 Biology & Chemistry
   h3 Scientific study of living organisms 
   each major in majors
