@@ -34,6 +34,7 @@ app.get('/science/computer', routes.computer);
 app.get('/science/math', routes.math);
 app.get('/science/life', routes.life);
 app.get('/ss/cognitive', routes.cognitive);
+app.get('/ss/continental', routes.continental);
 app.get('/seedData', routes.seedData);
 app.get('/languages', routes.languages);
 app.get('/ss/science', routes.ssscience);
