@@ -3,10 +3,12 @@ var mongoose = require('mongoose');
 var majorSchema = require('../schemas/major');
 var computerMajorSchema = require('../schemas/computerMajor');
 var mathMajorSchema = require('../schemas/mathMajor');
+var lifeMajorSchema = require('../schemas/lifeMajor')
 
 var Major = mongoose.model('Major');
 var computerMajor = mongoose.model('computerMajor');
 var mathMajor = mongoose.model('mathMajor');
+var lifeMajor = mongoose.model('lifeMajor');
 
 /* GET home page. */
 exports.index = function(req, res){
@@ -29,12 +31,12 @@ exports.seed = function(req,res){
 
 exports.seedData = function(req,res){
 
-	new Major({
-		name : 'Mathematics',
-		secondary : 'Economics',
-		explanation : 'Represent theories and model equations to analyze economic problems',
-		career : 'Accounting',
-		famous : 'Augustin Cournot'
+	new ifeMajor({
+		name : 'Chemistry',
+		secondary : 'English',
+		explanation : 'Recognize scientific processes and incorporate them into literature',
+		career : 'Novelist',
+		famous : 'Agatha Christie'
 	}
 		).save(function (err, major){ 
 			console.log(major)
@@ -64,5 +66,12 @@ exports.math = function(req,res){
 	mathMajor.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("math", {majors:docs});
+	})
+}
+
+exports.life = function(req,res){
+	lifeMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("life", {majors:docs});
 	})
 }
