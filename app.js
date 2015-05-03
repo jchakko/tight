@@ -35,7 +35,11 @@ app.get('/science/math', routes.math);
 app.get('/science/life', routes.life);
 app.get('/ss/cognitive', routes.cognitive);
 app.get('/seedData', routes.seedData);
-
+app.get('/languages', routes.languages);
+app.get('/ss/science', routes.ssscience);
+app.get('/ss/continental', routes.continental);
+app.get('/ss', routes.ss);
+app.get('/arts', routes.arts);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

@@ -84,3 +84,37 @@ exports.cognitive = function(req,res){
 		res.render("cognitive", {majors:docs});
 	})
 }
+
+exports.languages = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("languages", {majors:docs});
+	})
+}
+exports.ssscience = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("ssscience", {majors:docs});
+	})
+}
+
+exports.ss = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("ss", {majors:docs});
+	})
+}
+
+exports.arts = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("arts", {majors:docs});
+	})
+}
+
+exports.continental = function(req,res){
+	cognitiveMajor.find({}, function(err, docs) {
+		console.log(docs);
+		res.render("continental", {majors:docs});
+	})
+}
