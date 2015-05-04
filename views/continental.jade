@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  body(style="background-color: #CD853F")
   h1 Africana | American | Latin America Studies 
   h3 Scholarship of history, political & cultural movements, economies, and identies  
   each major in majors
@@ -8,3 +9,6 @@ block content
     p Description : #{major.explanation}
     p Career Path: #{major.career}
     p Notable Person: #{major.famous}
+
+  img(src= "http://i.imgur.com/cv1kSSq.png")
+  img(src= "http://i.imgur.com/FoqWBND.png")

@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  body(style="background-color: #f4a460")
   h1 Languages
   each major in majors
     h2 #{major.secondary}
@@ -8,3 +9,4 @@ block content
     p Career Path: #{major.career}
     p Notable Person: #{major.famous}
     
+  img(src= "http://i.imgur.com/zoaMD1i.png")

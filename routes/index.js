@@ -6,6 +6,8 @@ var mathMajorSchema = require('../schemas/mathMajor');
 var lifeMajorSchema = require('../schemas/lifeMajor');
 var cognitiveMajorSchema = require('../schemas/cognitiveMajor');
 var continentalMajorSchema = require('../schemas/continentalMajor');
+var artMajorSchema = require('../schemas/artMajor');
+var languageSchema = require('../schemas/languageMajor');
 
 var Major = mongoose.model('Major');
 var computerMajor = mongoose.model('computerMajor');
@@ -13,6 +15,8 @@ var mathMajor = mongoose.model('mathMajor');
 var lifeMajor = mongoose.model('lifeMajor');
 var cognitiveMajor = mongoose.model('cognitiveMajor');
 var continentalMajor = mongoose.model('continentalMajor');
+var artMajor = mongoose.model('artMajor');
+var languageMajor = mongoose.model('languageMajor');
 
 /* GET home page. */
 exports.index = function(req, res){
@@ -88,7 +92,7 @@ exports.cognitive = function(req,res){
 }
 
 exports.languages = function(req,res){
-	cognitiveMajor.find({}, function(err, docs) {
+	languageMajor.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("languages", {majors:docs});
 	})
@@ -108,7 +112,7 @@ exports.ss = function(req,res){
 }
 
 exports.arts = function(req,res){
-	cognitiveMajor.find({}, function(err, docs) {
+	artMajor.find({}, function(err, docs) {
 		console.log(docs);
 		res.render("arts", {majors:docs});
 	})
